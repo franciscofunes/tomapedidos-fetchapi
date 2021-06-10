@@ -1,3 +1,15 @@
+ListarProductos();
+function ListarProductos() {
+	fetch('listar.php', {
+		method: 'POST',
+	})
+		.then((response) => response.text())
+		.then((response) => {
+			//id del tbody
+			resultado.innerHTML = response;
+		});
+}
+
 registrar.addEventListener('click', () => {
 	fetch('registrar.php', {
 		method: 'POST',
@@ -13,6 +25,7 @@ registrar.addEventListener('click', () => {
 					timer: 1500,
 				});
 				frm.reset();
+				ListarProductos();
 			}
 		});
 });
