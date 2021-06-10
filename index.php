@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-3">
                 <div class="card">
                     <div class="card-body">
                         <form action="" method="post" id="frm">
@@ -45,13 +45,13 @@
                                 <input type="text" name="seña" id="seña" class="form-control">                           
                             </div>
                             <div class="form-group">
-                                <input type="button" value="Registrar" id="registrar" class="btn btn-primary btn-block">
+                                <input type="button" value="Registrar" id="registrar" class="btn btn-warning btn-block">
                             </div>
                         </form>                    
                     </div>                
                 </div>
             </div>
-            <div class="col-log-8">
+            <div class="col-lg-9">
                 <table class="table table-hover table-responsive">
                     <thead class="thead-dark">
                         <tr>
