@@ -24,7 +24,7 @@
                 <td>$".$saldo. "</td>   
                 <td>
                     <button type='button' class='btn btn-success btn-block'>Editar</button>
-                    <button type='button' class='btn btn-danger btn-block'>Eliminar</button>
+                    <button type='button' class='btn btn-danger btn-block' onclick=Eliminar('". $data['id'] ."')>Eliminar</button>
                 </td>  
             </tr>";
     }

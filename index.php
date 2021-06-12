@@ -10,13 +10,13 @@
     
 </head>
 <body>
-    <div class="container">
+    <div class="container mt-3 ">
         <div class="row">
             <div class="col-lg-3">
                 <div class="card">
-                    <div class="card-body">
+                    <div class="card-body bg-light">
                         <form action="" method="post" id="frm">
-                            <div class="form-group">
+                            <div class="form-group ">
                                 <label for="">Código</label>
                                 <input type="text" name="codigo" id="codigo" class="form-control">
                             </div>
