@@ -10,14 +10,18 @@
     
 </head>
 <body>
-    <div class="container mt-3 ">
+    <div class="container mt-3 mb-3 ">
         <div class="row">
             <div class="col-lg-3">
                 <div class="card">
+                    <div class="card-header bg-warning">
+                        <h3 class="text-center">Registro Pedidos</h3>
+                    </div>
                     <div class="card-body bg-light">
                         <form action="" method="post" id="frm">
                             <div class="form-group ">
                                 <label for="">Código</label>
+                                <input type="hidden" name="idp" id="idp" value="">
                                 <input type="text" name="codigo" id="codigo" class="form-control">
                             </div>
                             <div class="form-group">
@@ -42,7 +46,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Seña</label>
-                                <input type="text" name="seña" id="seña" class="form-control">                           
+                                <input type="text" name="sena" id="sena" class="form-control">                           
                             </div>
                             <div class="form-group">
                                 <input type="button" value="Registrar" id="registrar" class="btn btn-warning btn-block">
@@ -52,6 +56,16 @@
                 </div>
             </div>
             <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-lg-6 ml-auto">
+                        <form action="" method="post">
+                            <div class="form-group">
+                                <label for="">Buscar Pedido</label>
+                                <input type="text" name="buscar" id="buscar" placeholder="buscar..." class="form-control">
+                            </div>
+                        </form>
+                    </div>
+                </div>
                 <table class="table table-hover table-responsive">
                     <thead class="thead-dark">
                         <tr>

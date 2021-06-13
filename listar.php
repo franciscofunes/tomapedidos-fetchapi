@@ -1,8 +1,15 @@
 <?php
+    $data = file_get_contents("php://input");
+    
+
     require "conexion.php";
 
     $consulta = $pdo->prepare("SELECT * FROM pedidos ORDER BY id DESC");
     $consulta->execute();
+    if($data != ""){
+        $consulta = $pdo->prepare("SELECT * FROM pedidos WHERE id LIKE '%".$data."%' OR cliente LIKE '%".$data."%' OR producto LIKE '%".$data."%'");
+        $consulta->execute();
+    }
     $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
 
 
@@ -23,7 +30,7 @@
                 <td>$".$total. "</td>
                 <td>$".$saldo. "</td>   
                 <td>
-                    <button type='button' class='btn btn-success btn-block'>Editar</button>
+                    <button type='button' class='btn btn-success btn-block' onclick=Editar('". $data['id'] ."')>Editar</button>
                     <button type='button' class='btn btn-danger btn-block' onclick=Eliminar('". $data['id'] ."')>Eliminar</button>
                 </td>  
             </tr>";

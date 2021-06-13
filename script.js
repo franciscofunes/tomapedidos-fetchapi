@@ -1,7 +1,8 @@
 ListarProductos();
-function ListarProductos() {
+function ListarProductos(busqueda) {
 	fetch('listar.php', {
 		method: 'POST',
+		body: busqueda,
 	})
 		.then((response) => response.text())
 		.then((response) => {
@@ -26,6 +27,17 @@ registrar.addEventListener('click', () => {
 				});
 				frm.reset();
 				ListarProductos();
+			} else {
+				Swal.fire({
+					icon: 'success',
+					title: 'Modificado',
+					showConfirmButton: false,
+					timer: 1500,
+				});
+				registrar.value = 'Registrar';
+				idp.value = '';
+				ListarProductos();
+				frm.reset();
 			}
 		});
 });
@@ -60,3 +72,31 @@ function Eliminar(id) {
 		}
 	});
 }
+
+function Editar(id) {
+	fetch('editar.php', {
+		method: 'POST',
+		body: id,
+	})
+		.then((response) => response.json())
+		.then((response) => {
+			idp.value = response.id;
+			codigo.value = response.codigo;
+			cliente.value = response.cliente;
+			telefono.value = response.telefono;
+			producto.value = response.producto;
+			cantidad.value = response.cantidad;
+			precio.value = response.precio;
+			sena.value = response.sena;
+			registrar.value = 'Actualizar';
+		});
+}
+
+buscar.addEventListener('keyup', () => {
+	const valor = buscar.value;
+	if (valor === '') {
+		ListarProductos();
+	} else {
+		ListarProductos(valor);
+	}
+});
