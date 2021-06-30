@@ -23,6 +23,7 @@
                 <td>". $data['id'] ."</td>
                 <td>". $data['cliente'] ."</td>
                 <td>". $data['telefono'] ."</td>
+                <td>". $data['direccion'] ."</td>
                 <td>". $data['producto'] ."</td>
                 <td>". $data['cantidad'] ."</td>
                 <td>$". $data['precio'] ."</td>
