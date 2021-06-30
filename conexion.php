@@ -1,8 +1,12 @@
 <?php 
     //localhost
-    $servidor = "mysql:dbname=pedidos-lapaz;host=localhost";
-    $user = "root";
-    $pass="";
+    //$servidor = "mysql:dbname=pedidos-lapaz;host=localhost";
+    //$user = "root";
+    //$pass="";
+    //remotehost
+    $servidor = "mysql:dbname=8qSPKXXNPP;host=remotemysql.com";
+    $user = "8qSPKXXNPP";
+    $pass="4wJzwBpTny";
 
 
     try {

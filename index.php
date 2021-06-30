@@ -33,6 +33,10 @@
                                 <input type="text" name="telefono" id="telefono" class="form-control">
                             </div>
                             <div class="form-group">
+                                <label for="">Dirección</label>
+                                <input type="text" name="direccion" id="direccion" class="form-control">
+                            </div>
+                            <div class="form-group">
                                 <label for="">Producto</label>
                                 <input type="text" name="producto" id="producto" class="form-control">
                             </div>
@@ -72,6 +76,7 @@
                             <th>ID</th>
                             <th>Cliente</th>
                             <th>Télefono</th>
+                            <th>Dirección</th>
                             <th>Producto</th>
                             <th>Cantidad</th>
                             <th>Precio</th>
